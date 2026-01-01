@@ -6,6 +6,10 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import routes from "./routes/index.js";
+import { apiRateLimiter } from "./middleware/rateLimiter.js";
+
+// import { apiRateLimiter } from "./middleware/rateLimiter.js";
+
 
 dotenv.config();
 connectDB();
@@ -17,6 +21,7 @@ app.use(helmet());
 app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(apiRateLimiter);
 
 // API Routes
 app.use("/api/v1", routes);
