@@ -1,8 +1,7 @@
-export default function App() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <h1 className="text-3xl font-semibold text-green-800">VanderFlix</h1>
-    </div>
-  );
+import Experiences from "./pages/Experiences";
+
+function App() {
+  return <Experiences />;
 }
 
+export default App;
