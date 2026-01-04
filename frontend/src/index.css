@@ -68,3 +68,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+body {
+  padding-top: 80px;
+}
+input::placeholder {
+  color: #555;
+  opacity: 1;
+}
+input {
+  color: black !important;
+  background: white !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
